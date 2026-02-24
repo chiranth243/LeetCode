@@ -10,6 +10,8 @@ class Solution:
 
         dummy = ListNode(0, head)
         prev = dummy
+        temp = prev.next
+        nums = set()
 
         while head:
             if head.next and head.val == head.next.val:
@@ -21,5 +23,6 @@ class Solution:
             else:
                 prev = prev.next
             head = prev.next
+
         
         return dummy.next
